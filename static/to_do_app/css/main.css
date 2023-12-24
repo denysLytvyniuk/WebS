@@ -1,0 +1,50 @@
+body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			width: 100%;
+			background: #7abecc !important;
+		}
+
+
+
+.hello-msg{
+        font-size: 24px;
+        color: #fff;
+    }
+
+.log-button{
+	font-size: 18px;
+	color: #d30000;
+}
+
+.input-group-text {
+	margin-left: 10px;
+	color: white !important;
+	border: 0 !important;
+	border-radius: 0.25rem 0 0 0.25rem !important;
+}
+
+.input-group-text:hover {
+	margin-left: 10px;
+	color: #c28080 !important;
+	border: 0 !important;
+	border-radius: 0.25rem 0 0 0.25rem !important;
+}
+
+.auth-div {
+
+}
+
+.dropdown-content {
+	position: fixed;
+	right: 0;
+	display: none;
+	z-index: 9999;
+	background-color: #a5e7bd;
+	border: 1px solid rgb(175, 95, 95);
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+

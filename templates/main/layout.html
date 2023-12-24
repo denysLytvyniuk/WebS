@@ -1,0 +1,94 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    {% block head %} {% endblock %}
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'main/img/logo.png' %}" />
+    <link rel="stylesheet" href="{% static 'main/css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/layout.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <script type="text/javascript" src="{% static 'main/js/layout.js' %}"></script>
+</head>
+<body>
+
+            <header id="header" class="space-style">
+          <div class="logo">
+            <a  href="{% url 'home' %}">
+                <img  src="{% static 'main/img/logo.png' %}" alt="Site Logo">
+            </a>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="{% url 'to_do_app' %}">To Do App</a></li>
+              <li><a href="#">Button 2</a></li>
+              <li><a href="#">Button 3</a></li>
+              <li><a href="#">Button 4</a></li>
+              <li><a href="#">Button 5</a></li>
+            </ul>
+          </nav>
+          <div class="auth-space">
+            {% block auth %} {% endblock %}
+          </div>
+        </header>
+
+
+    <div style="margin-top: 80px;
+                height: 100%">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+     <footer class="site-footer">
+          <div class="container">
+            <div class="footer-section">
+              <h4 class="footer-section-title">Features</h4>
+              <ul class="footer-section-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="../trading">Trading</a></li>
+                <li><a href="/profile/wallet">Wallet</a></li>
+                <li><a href="/profile/invest">Invest</a></li>
+                <li><a href="/profile/support">Support</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4 class="footer-section-title">Market tools</h4>
+              <ul class="footer-section-list">
+                <li><a href="../market-crypto">Crypto market cap</a></li>
+                <li><a href="../market-screener">Market screener</a></li>
+                <li><a href="../technical-analysis">Technical analysis</a></li>
+                <li><a href="../cross-rates">Cross rates</a></li>
+                <li><a href="../heat-map">Currency heat map</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4 class="footer-section-title">Legal</h4>
+              <ul class="footer-section-list">
+                <li><a href="../terms">Terms of service</a></li>
+                <li><a href="../privacy-notice">Privacy notice</a></li>
+                <li><a href="../cookies-policy">Cookies policy</a></li>
+                <li><a href="../aml-kyc-policy">AML &amp; KYC policy</a></li>
+                <li><a href="../fees">Fees</a></li>
+                <li><a href="../bugbounty">Bug Bounty</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4 class="footer-section-title">Exchange Pair</h4>
+              <ul class="footer-section-list">
+                <li><a href="../trading?pair=BTC_USDT">BTC to USDT</a></li>
+                <li><a href="../trading?pair=ETH_USDT">ETH to USDT</a></li>
+                <li><a href="../trading?pair=LTC_USDT">LTC to USDT</a></li>
+                <li><a href="../trading?pair=ADA_USDT">ADA to USDT</a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+
+
+
+</body>
+
+</html>

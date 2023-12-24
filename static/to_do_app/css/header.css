@@ -1,0 +1,59 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  z-index: 9999;
+  transition: background-color 0.3s ease;
+}
+
+.space-style {
+
+  background-color: #333;
+  color: #fff;
+}
+
+.logo img {
+  margin-left: 20px;
+  width: 120px;
+  height: 80px;
+  mix-blend-mode: multiply;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.auth-space {
+  display: flex;
+  margin-left: auto;
+  margin-right: 2%;
+}
+
+.user-info {
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.auth-space a {
+  margin-left: 10px;
+}

@@ -1,0 +1,25 @@
+.section::-webkit-scrollbar-track {
+  background-color: darkgrey;
+}
+
+::-webkit-scrollbar {
+    width: 1em;
+}
+
+::-webkit-scrollbar-track {
+    background: hsl(120 50% 75% / 1);
+    border-radius: 100vw;
+    margin-block: .5em;
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(120, 79%, 22%);
+    border-radius: 100vw;
+    border: .25em solid hsl(120 50% 75% / 1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(120, 57%, 37%);
+}
+
+.show {display: block;}

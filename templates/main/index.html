@@ -1,0 +1,39 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+Main Page
+{% endblock %}
+
+{% block head %}
+
+
+        <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+
+{% endblock %}
+
+{% block auth %}
+    {% if user.is_authenticated %}
+        <div class="auth-div">
+          <span class="hello-msg">{{ user.username }}</span>
+
+            <span onclick="myFunction()" class="dropbtn input-group-text"> <i class="fas fa-user"></i> </span>
+        </div>
+
+{% else %} 
+  <a class="log-button" href="{% url 'login' %}">Войти</a>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+    <div id="myDropdown" class="dropdown-content">
+        <a class="log-button" href="{% url 'logout' %}">Выйти</a>
+    </div>
+
+    <h2>Main page</h2>
+    <a href="{% url 'login' %}" class="ml-2">Login</a>
+    <a href="{% url 'register' %}" class="ml-2">register</a>
+
+{% endblock %}
+
