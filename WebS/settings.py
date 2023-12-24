@@ -37,6 +37,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'WebS.apps.authentication',
     'WebS.apps.main',
     'WebS.apps.restapi',

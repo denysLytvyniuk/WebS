@@ -5,8 +5,6 @@ from django.http import HttpResponse
 # Create your views here.
 from django.contrib.auth.decorators import login_required
 
-from WebS.apps.main.apps import MainConfig
-from WebS.apps.main.tasks import update_prices
 
 
 def index(request):
