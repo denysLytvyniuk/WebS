@@ -12,6 +12,8 @@ from django.utils.encoding import force_bytes, force_str
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from .tokens import account_activation_token
 
+
+
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(required=True)
 
@@ -67,7 +69,6 @@ def RegisterPage(request):
     return render(request, 'main/register.html', context)
 
 
-
 def LoginPage(request):
     if request.user.is_authenticated:
         return redirect('home')
@@ -86,7 +87,7 @@ def LoginPage(request):
     return render(request, 'main/login.html', context)
 
 
-def logoutUser(request):
+def LogoutUser(request):
     logout(request)
     return redirect('login')
 
